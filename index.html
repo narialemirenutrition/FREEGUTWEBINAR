@@ -199,34 +199,60 @@ body { font-family: var(--fb); background: var(--cream); color: var(--dark); ove
 .sec-title { font-family: var(--ff); font-size: clamp(1.7rem,4vw,2.6rem); font-weight: 700; line-height: 1.18; color: var(--dark); margin-bottom: 16px; }
 .sec-sub { font-size: 16px; color: var(--mid); line-height: 1.72; font-weight: 300; max-width: 580px; }
 
-/* ── PROBLEM SECTION ── */
-.problem { background: var(--cream); }
-.problem-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 44px; }
-@media(max-width:680px){ .problem-layout{grid-template-columns:1fr;} }
-.problem-visual {
-  background: var(--dark); border-radius: 20px;
-  padding: 32px 28px; position: relative; overflow: hidden;
-}
-.problem-visual::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(107,146,120,0.15) 0%, transparent 70%);
-}
-.problem-quote {
-  font-family: var(--ff); font-size: 18px; font-style: italic;
-  color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 18px;
-  position: relative;
-}
-.problem-quote::before { content: '\201C'; font-size: 56px; color: var(--sage); line-height: 0; position: relative; top: 20px; margin-right: 4px; }
-.problem-attr { font-size: 13px; color: var(--sage-lite); font-weight: 500; }
-.p-item {
-  display: flex; gap: 14px; align-items: flex-start;
-  padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.07);
-}
-.p-item:last-child { border-bottom: none; }
-.p-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
-.p-item h4 { font-size: 14.5px; font-weight: 600; color: var(--dark); margin-bottom: 3px; }
-.p-item p { font-size: 13px; color: var(--mid); line-height: 1.55; font-weight: 300; }
+<!-- PROBLEM / AWARENESS SECTION -->
+<section style="padding: 70px 20px; background:#ffffff;">
+
+  <div style="max-width: 780px; margin: 0 auto; font-family: Arial, sans-serif;">
+
+    <!-- LABEL -->
+    <div style="text-align:center; margin-bottom: 20px;">
+      <span style="display:inline-block; padding:6px 14px; background:#f2f2f2; color:#000; font-weight:600; font-size:13px; border-radius:20px;">
+        ⚠️ This is more common than you think
+      </span>
+    </div>
+
+    <!-- HEADLINE -->
+    <h2 style="font-size: 30px; font-weight: 800; line-height: 1.3; text-align:center; margin-bottom: 20px;">
+      An estimated <span style="color:#000;">60 to 70 million Americans</span><br>
+      struggle with digestive issues.
+    </h2>
+
+    <!-- SUBTEXT -->
+    <p style="font-size: 18px; text-align:center; color:#444; margin-bottom: 35px;">
+      But it’s not just a statistic.
+    </p>
+
+    <!-- CORE PAIN POINTS -->
+    <div style="font-size: 18px; line-height: 1.7; color:#222;">
+
+      <p>Waking up with <strong>bloating you can’t explain</strong>.</p>
+      <p><strong>Brain fog</strong> that affects your focus and clarity.</p>
+      <p>Fatigue that drains your afternoons.</p>
+      <p>Constant bathroom anxiety or food avoidance.</p>
+
+      <p style="margin-top: 25px; font-weight:700;">
+        And the worst part?
+      </p>
+
+      <p>
+        It continues even after doctor visits, tests, and diet changes.
+      </p>
+
+      <p>
+        For many people, it becomes their normal.
+      </p>
+
+    </div>
+
+    <!-- TRANSITION BOX -->
+    <div style="margin-top: 35px; padding: 16px; background:#f7f7f7; border-left:4px solid #000; font-size:16px;">
+      <strong>
+        In this free webinar, you’ll learn why this keeps happening — even when everything looks “normal” on paper.
+      </strong>
+    </div>
+
+  </div>
+</section>
 
 /* ── LEARN ── */
 .learn { background: var(--white); }
