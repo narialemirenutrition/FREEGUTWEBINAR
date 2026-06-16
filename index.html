@@ -868,6 +868,276 @@ ACCESS CLOSES IMMEDIATELY UPON REACHING 20 REGISTRANTS OR ON JUNE 18.
 </body>
 </html>
 
+  <!-- ============================================================
+     FEATURED IN SECTION — scrolling carousel
+     ============================================================ -->
+<section class="featured-section">
+  <div class="featured-wrapper">
+    <p class="featured-eyebrow">As seen in</p>
+    <h2 class="featured-heading">Trusted by the publications<br/>that shape the health conversation</h2>
+  </div>
+
+  <div class="ticker-outer">
+    <div class="ticker-track">
+      <!-- logos repeated twice for seamless loop -->
+      <div class="ticker-item"><span class="pub-name tzr">TZR<span class="pub-sub">The Zoe Report</span></span></div>
+      <div class="ticker-item"><span class="pub-name vitamin">The Vitamin Shoppe</span></div>
+      <div class="ticker-item"><span class="pub-name gosolo">GoSolo by Subkit</span></div>
+      <div class="ticker-item"><span class="pub-name sunset">Sunset</span></div>
+      <div class="ticker-item"><span class="pub-name yahoo">yahoo<em>!</em>life</span></div>
+      <div class="ticker-item"><span class="pub-name mens">Men's Health</span></div>
+      <div class="ticker-item"><span class="pub-name medium">Medium</span></div>
+      <div class="ticker-item"><span class="pub-name womens">Women's Health</span></div>
+      <div class="ticker-item"><span class="pub-name health">health</span></div>
+      <div class="ticker-item"><span class="pub-name shape">SHAPE</span></div>
+      <div class="ticker-item"><span class="pub-name gulf">GulfInsider</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="ticker-item"><span class="pub-name tzr">TZR<span class="pub-sub">The Zoe Report</span></span></div>
+      <div class="ticker-item"><span class="pub-name vitamin">The Vitamin Shoppe</span></div>
+      <div class="ticker-item"><span class="pub-name gosolo">GoSolo by Subkit</span></div>
+      <div class="ticker-item"><span class="pub-name sunset">Sunset</span></div>
+      <div class="ticker-item"><span class="pub-name yahoo">yahoo<em>!</em>life</span></div>
+      <div class="ticker-item"><span class="pub-name mens">Men's Health</span></div>
+      <div class="ticker-item"><span class="pub-name medium">Medium</span></div>
+      <div class="ticker-item"><span class="pub-name womens">Women's Health</span></div>
+      <div class="ticker-item"><span class="pub-name health">health</span></div>
+      <div class="ticker-item"><span class="pub-name shape">SHAPE</span></div>
+      <div class="ticker-item"><span class="pub-name gulf">GulfInsider</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIDEO INTERVIEW SECTION
+     ============================================================ -->
+<section class="video-section">
+  <div class="video-wrapper">
+    <p class="video-eyebrow">Watch & Listen</p>
+    <h2 class="video-heading">What happens when a gut health expert<br/>sits down with one of the internet's biggest podcasters?</h2>
+    <p class="video-desc">In this candid interview, Naria pulls back the curtain on the root causes of bloating, fatigue, and brain fog that most doctors miss — and the one test that changes everything. If you've ever felt like something is "off" but every lab came back "normal," this conversation was made for you.</p>
+
+    <div class="video-embed-wrap" id="video-container">
+      <!-- Thumbnail shown first; clicking loads the real iframe -->
+      <div class="video-thumb" id="video-thumb" onclick="loadVideo()">
+        <img
+          src="https://img.youtube.com/vi/PuBqC6GzIjs/maxresdefault.jpg"
+          alt="Healing from the Inside Out — Watch the interview"
+          class="video-thumb-img"
+        />
+        <div class="play-btn" aria-label="Play video">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/>
+            <polygon points="32,24 60,40 32,56" fill="white"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function loadVideo() {
+        var container = document.getElementById('video-thumb');
+        container.innerHTML =
+          '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PuBqC6GzIjs?autoplay=1" title="Healing from the Inside Out" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"></iframe>';
+      }
+    </script>
+
+    <p class="video-caption">"Healing from the Inside Out" — Gut Health Deep Dive</p>
+  </div>
+</section>
+
+<style>
+  /* ── Featured In ── */
+  .featured-section {
+    background: #3d5c47;
+    padding: 4rem 0 3.5rem;
+    overflow: hidden;
+  }
+  .featured-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .featured-eyebrow {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a8c9b5;
+    margin: 0 0 0.5rem;
+  }
+  .featured-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #f0ece4;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  /* Ticker */
+  .ticker-outer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+  }
+  .ticker-outer::before,
+  .ticker-outer::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .ticker-outer::before {
+    left: 0;
+    background: linear-gradient(to right, #3d5c47, transparent);
+  }
+  .ticker-outer::after {
+    right: 0;
+    background: linear-gradient(to left, #3d5c47, transparent);
+  }
+
+  .ticker-track {
+    display: flex;
+    gap: 0;
+    width: max-content;
+    animation: ticker-scroll 32s linear infinite;
+  }
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ticker-item {
+    display: flex;
+    align-items: center;
+    padding: 0 2.5rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    white-space: nowrap;
+    height: 60px;
+  }
+
+  /* Publication name styles */
+  .pub-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f0ece4;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .pub-sub {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #c8ddd0;
+    text-transform: uppercase;
+  }
+  .pub-name.tzr    { color: #c9a84c; font-style: italic; font-size: 22px; }
+  .pub-name.vitamin { font-size: 14px; color: #7ec8e8; font-weight: 600; letter-spacing: 0.04em; }
+  .pub-name.gosolo  { font-size: 15px; color: #f0ece4; font-weight: 500; }
+  .pub-name.sunset  { font-size: 22px; color: #e87e3e; font-style: italic; font-family: Georgia, serif; }
+  .pub-name.yahoo   { font-size: 18px; color: #f0ece4; font-weight: 700; }
+  .pub-name.yahoo em { font-style: normal; color: #7b68ee; }
+  .pub-name.mens    { font-size: 17px; color: #f0ece4; font-weight: 900; letter-spacing: -0.03em; }
+  .pub-name.medium  { font-size: 20px; color: #f0ece4; font-weight: 500; font-family: Georgia, serif; }
+  .pub-name.womens  { font-size: 16px; color: #f0ece4; font-weight: 900; letter-spacing: -0.02em; }
+  .pub-name.health  { font-size: 24px; color: #4a90d9; font-weight: 900; font-family: Georgia, serif; }
+  .pub-name.shape   { font-size: 22px; color: #e85454; font-weight: 900; letter-spacing: 0.06em; }
+  .pub-name.gulf    { font-size: 17px; color: #8fb8d4; font-weight: 500; }
+
+  /* ── Video Section ── */
+  .video-section {
+    background: #2e4436;
+    padding: 5rem 2rem;
+  }
+  .video-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .video-eyebrow {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a8c9b5;
+    margin: 0 0 0.75rem;
+  }
+  .video-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #f0ece4;
+    line-height: 1.35;
+    margin: 0 0 1.25rem;
+  }
+  .video-desc {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    color: #c8ddd0;
+    line-height: 1.8;
+    margin: 0 auto 2.5rem;
+    max-width: 640px;
+  }
+  .video-embed-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .video-thumb {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    cursor: pointer;
+  }
+  .video-thumb-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    transition: transform 0.2s ease;
+  }
+  .play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
+  .play-btn svg { width: 80px; height: 80px; }
+  .video-caption {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 12px;
+    color: #7a9e8a;
+    margin: 1.25rem 0 0;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 700px) {
+    .featured-heading { font-size: 20px; }
+    .video-heading { font-size: 20px; }
+    .video-desc { font-size: 14px; }
+  }
+</style>
+</body>
+</html>
+
 <!-- WHO IT'S FOR -->
 <section class="section who">
   <div class="inner reveal">
