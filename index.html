@@ -625,64 +625,89 @@ ACCESS CLOSES IMMEDIATELY UPON REACHING 20 REGISTRANTS OR ON JUNE 18.
 
 <!-- COUNTDOWN -->
 <div class="countdown-wrap">
-  <div class="cd-label">Webinar starts in — Thursday June 18, 2026 at 5:15 PM PT</div>
+  <div class="cd-label">
+    Webinar starts in — Thursday June 18, 2026 at 5:15 PM PT
+  </div>
+
   <div class="countdown">
-    <div class="cd-unit"><div class="cd-num" id="days">00</div><div class="cd-lbl">Days</div></div>
+    <div class="cd-unit">
+      <div class="cd-num" id="days">00</div>
+      <div class="cd-lbl">Days</div>
+    </div>
+
     <div class="cd-sep">:</div>
-    <div class="cd-unit"><div class="cd-num" id="hours">00</div><div class="cd-lbl">Hours</div></div>
+
+    <div class="cd-unit">
+      <div class="cd-num" id="hours">00</div>
+      <div class="cd-lbl">Hours</div>
+    </div>
+
     <div class="cd-sep">:</div>
-    <div class="cd-unit"><div class="cd-num" id="mins">00</div><div class="cd-lbl">Mins</div></div>
+
+    <div class="cd-unit">
+      <div class="cd-num" id="mins">00</div>
+      <div class="cd-lbl">Minutes</div>
+    </div>
+
     <div class="cd-sep">:</div>
-    <div class="cd-unit"><div class="cd-num" id="secs">00</div><div class="cd-lbl">Secs</div></div>
+
+    <div class="cd-unit">
+      <div class="cd-num" id="secs">00</div>
+      <div class="cd-lbl">Seconds</div>
+    </div>
   </div>
 </div>
 
 <!-- PROBLEM SECTION -->
 <section class="section problem">
   <div class="inner reveal">
+
     <div class="eyebrow">According to research!</div>
-    <h2 class="sec-title">An estimated 60 to 70 million Americans suffer from digestive disorders.<br/></h2>
-<em>But this isn’t just a statistic.</em>
 
-        <div class="p-item">
-          <div class="p-icon">🫄</div>
-          <div>
-            <h3>It’s waking up with unexplained bloating</h3>
-          </div>
-        </div>
+    <h2 class="sec-title">
+      An estimated 60 to 70 million Americans suffer from digestive disorders.
+    </h2>
 
-        <div class="p-item">
-          <div class="p-icon">🧠</div>
-          <div>
-            <h3>It’s brain fog that kills your focus</h3>
-          </div>
-        </div>
+    <h4 style="font-style: italic; margin-bottom: 30px;">
+      But this isn’t just a statistic.
+    </h4>
 
-        <div class="p-item">
-          <div class="p-icon">😩</div>
-          <div>
-            <h3>It’s fatigue that steals your afternoons</h3>
-          </div>
-        </div>
+    <div class="p-item">
+      <div class="p-icon">🫄</div>
+      <div>
+        <h3>It’s waking up with unexplained bloating</h3>
+      </div>
+    </div>
 
-        <div class="p-item">
-          <div class="p-icon">🚻</div>
-          <div>
-            <h3>It’s searching for bathrooms, avoiding meals, and losing sleep</h3>
-          </div>
-        </div>
+    <div class="p-item">
+      <div class="p-icon">🧠</div>
+      <div>
+        <h3>It’s brain fog that kills your focus</h3>
+      </div>
+    </div>
 
-        <div class="p-item">
-          <div class="p-icon">🔁</div>
-          <div>
-            <h3>And the worst part - it keeps happening</h3>
-            <p>
-              </h4>Even after doctor visits, tests, medications, and diet changes.
-              For many people, the symptoms don’t go away - they become part of daily life.</h4>
-            </p>
-          </div>
-        </div>
+    <div class="p-item">
+      <div class="p-icon">😩</div>
+      <div>
+        <h3>It’s fatigue that steals your afternoons</h3>
+      </div>
+    </div>
 
+    <div class="p-item">
+      <div class="p-icon">🚻</div>
+      <div>
+        <h3>It’s searching for bathrooms, avoiding meals, and losing sleep</h3>
+      </div>
+    </div>
+
+    <div class="p-item">
+      <div class="p-icon">🔁</div>
+      <div>
+        <h3>And the worst part — it keeps happening</h3>
+        <p>
+          Even after doctor visits, tests, medications, and diet changes.
+          For many people, the symptoms don’t go away — they become part of daily life.
+        </p>
       </div>
     </div>
 
@@ -1134,5 +1159,44 @@ ACCESS CLOSES IMMEDIATELY UPON REACHING 20 REGISTRANTS OR ON JUNE 18.
     .video-desc { font-size: 14px; }
   }
 </style>
+<script>
+// COUNTDOWN TIMER
+const webinarDate = new Date("June 18, 2026 17:15:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = webinarDate - now;
+
+  if (distance <= 0) {
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("mins").innerHTML = "00";
+    document.getElementById("secs").innerHTML = "00";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+  const mins = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+  const secs = Math.floor(
+    (distance % (1000 * 60)) /
+    1000
+  );
+
+  document.getElementById("days").innerHTML = String(days).padStart(2, "0");
+  document.getElementById("hours").innerHTML = String(hours).padStart(2, "0");
+  document.getElementById("mins").innerHTML = String(mins).padStart(2, "0");
+  document.getElementById("secs").innerHTML = String(secs).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
